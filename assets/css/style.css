@@ -2014,3 +2014,17 @@ textarea.form-input::-webkit-resizer {
     max-width: 700px;
   }
 }
+
+/* Styles for the ordered list */
+.custom-list {
+  list-style-type: decimal; /* Use decimal numbering (1, 2, 3, ...) */
+  font-family: Arial, sans-serif; /* Set font family */
+  padding-left: 20px; /* Add padding to the left */
+  margin-top: 10px; /* Add margin at the top */
+}
+
+/* Style for list items */
+.custom-list li {
+  margin-bottom: 8px; /* Add margin between list items */
+}
+
