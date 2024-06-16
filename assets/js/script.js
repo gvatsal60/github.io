@@ -29,9 +29,9 @@ const testimonialsModalFunc = function () {
 }
 
 // add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
+for (let item of testimonialsItem) {
 
-  testimonialsItem[i].addEventListener("click", function () {
+  item.addEventListener("click", function () {
 
     modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
     modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
@@ -57,8 +57,8 @@ const filterBtn = document.querySelectorAll("[data-filter-btn]");
 select.addEventListener("click", function () { elementToggleFunc(this); });
 
 // add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
+for (let item of selectItems) {
+  item.addEventListener("click", function () {
 
     let selectedValue = this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
@@ -73,14 +73,14 @@ const filterItems = document.querySelectorAll("[data-filter-item]");
 
 const filterFunc = function (selectedValue) {
 
-  for (let i = 0; i < filterItems.length; i++) {
+  for (let item of filterItems) {
 
     if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
+      item.classList.add("active");
+    } else if (selectedValue === item.dataset.category) {
+      item.classList.add("active");
     } else {
-      filterItems[i].classList.remove("active");
+      item.classList.remove("active");
     }
 
   }
@@ -90,9 +90,9 @@ const filterFunc = function (selectedValue) {
 // add event in all filter button items for large screen
 let lastClickedBtn = filterBtn[0];
 
-for (let i = 0; i < filterBtn.length; i++) {
+for (let item of filterBtn) {
 
-  filterBtn[i].addEventListener("click", function () {
+  item.addEventListener("click", function () {
 
     let selectedValue = this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
@@ -112,8 +112,8 @@ const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
 // add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
+for (let item of formInputs) {
+  item.addEventListener("input", function () {
 
     // check form validation
     if (form.checkValidity()) {
@@ -130,17 +130,17 @@ const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
 // add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
+for (let nav of navigationLinks) {
+  nav.addEventListener("click", function () {
 
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
+    for (let page of pages) {
+      if (this.innerHTML.toLowerCase() === page.dataset.page) {
+        page.classList.add("active");
+        nav.classList.add("active");
         window.scrollTo(0, 0);
       } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
+        page.classList.remove("active");
+        nav.classList.remove("active");
       }
     }
 
