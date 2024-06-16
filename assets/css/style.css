@@ -248,21 +248,6 @@ article.active {
   font-weight: var(--fw-500);
 }
 
-.article-title {
-  position: relative;
-  padding-bottom: 7px;
-}
-
-.article-title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 30px;
-  height: 3px;
-  background: var(--text-gradient-yellow);
-  border-radius: 3px;
-}
 
 .has-scrollbar::-webkit-scrollbar {
   width: 5px; /* for vertical scrollbar */
@@ -505,9 +490,6 @@ main {
   #ABOUT
 \*-----------------------------------*/
 
-.about .article-title {
-  margin-bottom: 15px;
-}
 
 .about-text {
   color: var(--light-gray);
@@ -800,10 +782,6 @@ main {
 /*-----------------------------------*\
   #RESUME
 \*-----------------------------------*/
-
-.article-title {
-  margin-bottom: 30px;
-}
 
 /**
  * education and experience
@@ -1372,16 +1350,6 @@ textarea.form-input::-webkit-resizer {
     padding: 30px;
   }
 
-  .article-title {
-    font-weight: var(--fw-600);
-    padding-bottom: 15px;
-  }
-
-  .article-title::after {
-    width: 40px;
-    height: 5px;
-  }
-
   .icon-box {
     width: 48px;
     height: 48px;
@@ -1478,10 +1446,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * #ABOUT
    */
-
-  .about .article-title {
-    margin-bottom: 20px;
-  }
 
   .about-text {
     margin-bottom: 40px;
